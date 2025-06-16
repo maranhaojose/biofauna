@@ -1,0 +1,91 @@
+
+        :root {
+            --verde-biologia: #2e7d32;
+            --verde-claro: #81c784;
+            --bege-natural: #f5f5dc;
+            --marrom-terroso: #8d6e63;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bege-natural);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            display: block;
+            background-color: var(--verde-biologia);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.2em;
+        }
+        
+        .container {
+            max-width: 1600px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
+        
+        .projeto-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border-top: 5px solid var(--verde-claro);
+            text-decoration: none !important;
+            color: inherit;
+        }
+        
+        .projeto-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .projeto-imagem {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .projeto-info {
+            padding: 15px;
+        }
+        
+        .projeto-titulo {
+            color: var(--verde-biologia);
+            margin-top: 0;
+            font-size: 1.3em;
+        }
+        
+        .projeto-desc {
+            color: var(--marrom-terroso);
+            font-size: 0.9em;
+            bottom: 40px;
+        }
+        
+        footer {
+            background-color: var(--verde-biologia);
+            color: white;
+            text-align: center;
+            padding: 5px;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
